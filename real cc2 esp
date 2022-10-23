@@ -1,0 +1,81 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Key = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local Enter = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.343053162, 0, 0.300335586, 0)
+Frame.Size = UDim2.new(0, 836, 0, 452)
+
+UICorner.Parent = Frame
+
+Key.Name = "Key"
+Key.Parent = Frame
+Key.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+Key.Position = UDim2.new(0.401913881, 0, 0.115044244, 0)
+Key.Size = UDim2.new(0, 456, 0, 144)
+Key.Font = Enum.Font.SourceSans
+Key.PlaceholderText = "Key here"
+Key.Text = "Enter Key"
+Key.TextColor3 = Color3.fromRGB(0, 0, 0)
+Key.TextScaled = true
+Key.TextSize = 14.000
+Key.TextWrapped = true
+
+UICorner_2.Parent = Key
+
+Enter.Name = "Enter"
+Enter.Parent = Frame
+Enter.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+Enter.BorderSizePixel = 0
+Enter.Position = UDim2.new(0.453349292, 0, 0.595132768, 0)
+Enter.Size = UDim2.new(0, 370, 0, 94)
+Enter.Font = Enum.Font.SourceSans
+Enter.Text = "Enter"
+Enter.TextColor3 = Color3.fromRGB(0, 0, 0)
+Enter.TextScaled = true
+Enter.TextSize = 14.000
+Enter.TextWrapped = true
+Enter.MouseButton1Down:Connect(function()
+	if Key.Text == "CameronIsGay" then
+		TextLabel.Text = "Correct Key! (Loading)"
+        wait(3)
+		Frame:Destroy()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/postingrandomcrap/random_lua/main/cc2%20script"))() --script
+	else
+		TextLabel.Text = "Incorrect Key!"
+		wait(3)
+		TextLabel.Text = "Zevu's Scripts"
+	end
+end)
+
+UICorner_3.Parent = Enter
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+TextLabel.BorderColor3 = Color3.fromRGB(72, 72, 72)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0358851664, 0, 0.092920348, 0)
+TextLabel.Size = UDim2.new(0, 276, 0, 367)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Zevu's scripts"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
