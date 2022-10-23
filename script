@@ -1,0 +1,7 @@
+local lp = game.Players.LocalPlayer
+
+function kick()
+    lp:Kick("to be honest im too lazy i'll probs do it tommorow")
+end
+
+kick()
